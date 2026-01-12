@@ -4,15 +4,15 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        int NumToRoll;
+        int numToRoll;
 
         Console.WriteLine("Welcome to the dice throwing simulator!\r\n");
         Console.WriteLine("How many dice rolls would you like to simulate?\r\n");
 
-        NumToRoll = int.Parse(Console.ReadLine());
+        numToRoll = int.Parse(Console.ReadLine());
 
         DiceRoll diceRoll = new DiceRoll();
-        int[] rollResult = diceRoll.GetRolls(NumToRoll);
+        int[] rollResult = diceRoll.GetRolls(numToRoll);
 
         //Console.WriteLine(string.Join(", ", rollResult));
 
@@ -20,12 +20,12 @@ internal class Program
 
         for (int i = 0; i < 13; i++)
         {
-            Percentages[i] = Math.Round((decimal)rollResult[i] / NumToRoll * 100, 2);
+            Percentages[i] = Math.Round((decimal)rollResult[i] / numToRoll * 100, 2);
         }
 
         Console.WriteLine("DICE ROLLING SIMULATION RESULTS");
         Console.WriteLine("Each \"*\" represents 1% of the total number of rolls.\r\n");
-        Console.WriteLine("Total number of rolls = " + NumToRoll + ".\r\n");
+        Console.WriteLine("Total number of rolls = " + numToRoll + ".\r\n");
 
         // calculate percentages
         for (int i = 2; i < 13; i++)
@@ -34,6 +34,6 @@ internal class Program
 
         }
 
-        Console.WriteLine("\r\nThank you for using the dice throwing simulator. Goodbye!\r\n");
+        Console.WriteLine("\r\nThank you for using the dice throwing simulator. Goodbye!");
     }
 }
