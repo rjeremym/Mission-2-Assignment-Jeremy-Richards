@@ -14,8 +14,6 @@ internal class Program
         DiceRoll diceRoll = new DiceRoll();
         int[] rollResult = diceRoll.GetRolls(numToRoll);
 
-        //Console.WriteLine(string.Join(", ", rollResult));
-
         decimal[] Percentages = new decimal[13];
 
         for (int i = 0; i < 13; i++)
